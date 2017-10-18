@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Agency</title>
+  </head>
+  <body>
+    <body>
+  <form action="/company" method="post">
+  Name:
+  <br>
+  <input type="text" name="name">
+  <br>
+  Description:
+  <br>
+  <input type="text" name="description">
+  <br>
+  Suite:
+  <br>
+  <input type="text" name="suite">
+  <br>
+  <br> <br>
+  <input type="submit" name="" value="Add New User">
+</form>
+    <ul>
+    <% for(let i = 0; i< company.length; i++){ %>
+    <ul>
+    <li><a href = '/company/<%=company[i].id%>'><%= company[i].name %></li>
+    </ul>
+    <% } %>
+  </body>
+</html>

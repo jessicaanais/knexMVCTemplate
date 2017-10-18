@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile</title>
+  </head>
+  <body>
+    <p>Id - <%= company.id %></p>
+    <p>Name - <%= company.name %></p>
+    <p>Description - <%= company.description %></p>
+    <p>Suite - <%= company.suite %></p>
+
+    <% for(let i =0; i< member.length; i++){ %>
+    <p>Name - <%= member[i].First_name%> <%= member[i].Last_name%></p>
+    <p>Email - <%= member[i].email %></p>
+    <p>Position - <%= member[i].position %></p>
+    <% } %>
+  </body>
+</html>
