@@ -4,7 +4,6 @@ const knex = require("../db/knex.js");
   // GET ALL
   AllCompanies: function(req, res) {
     knex('company').then((result) => {
-      console.log(result)
       res.render('ALL', {company: result})
     })
     .catch((err) => {
@@ -20,7 +19,7 @@ const knex = require("../db/knex.js");
     }, '*')
     .then((result) => {
 
-      res.redirect("/company")
+      res.redirect("/")
     })
     .catch((err) => {
       console.error(err);
@@ -42,5 +41,6 @@ const knex = require("../db/knex.js");
      .catch((err) => {
        console.error(err)
      });
- }
+ },
+
 }
